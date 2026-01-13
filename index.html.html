@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<title>Kalesha Syed | Java Full Stack Developer</title>
+<meta name="description" content="Java Full Stack Developer fresher portfolio" />
+
+<style>
+:root{
+    --bg:#0f1724;
+    --muted:#9aa4b2;
+    --accent:#06b6d4;
+    --glass:rgba(255,255,255,0.04);
+    --radius:14px;
+    --maxw:1100px;
+    --ff:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+}
+
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:var(--ff);
+    background:linear-gradient(180deg,#071026 0%,var(--bg) 100%);
+    color:#e6eef6;
+    padding:40px 20px;
+    display:flex;
+    justify-content:center;
+}
+
+.container{
+    width:100%;
+    max-width:var(--maxw);
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.topname{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#06b6d4,#7c3aed);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    box-shadow:0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* logo image */
+.logo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* optional hover polish */
+.logo:hover{
+    transform:scale(1.05);
+    transition:transform .25s ease;
+}
+
+
+.muted{color:var(--muted);font-size:14px}
+
+/* NAV */
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    font-size:14px;
+    padding:8px 12px;
+    border-radius:8px;
+}
+nav a.primary{
+    background:var(--glass);
+    border:1px solid rgba(255,255,255,0.06);
+    color:#fff;
+}
+
+/* MAIN GRID */
+main{
+    display:grid;
+    grid-template-columns:1fr 360px;
+    gap:22px;
+}
+@media(max-width:900px){
+    main{grid-template-columns:1fr}
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+    padding:28px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,0.04);
+}
+
+/* SKILLS */
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+}
+.chip{
+    background:var(--glass);
+    padding:8px 12px;
+    border-radius:999px;
+    font-size:13px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+/* PROJECTS */
+.projects{
+    margin-top:22px;
+    display:grid;
+    gap:14px;
+}
+.card{
+    background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+    padding:16px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:13px;
+    text-decoration:none;
+    color:#021120;
+    background:linear-gradient(90deg,var(--accent),#7c3aed);
+}
+
+/* ===== RIGHT SIDE ===== */
+aside{
+    position:relative;
+}
+
+.sticky-box{
+    position:sticky;
+    top:24px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+/* PROFILE IMAGE */
+.profile-wrap{
+    position:relative;
+    height:500px;
+    border-radius:16px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#7c3aed,#06b6d4);
+    box-shadow:0 15px 40px rgba(0,0,0,0.45);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+.profile-wrap:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 30px rgba(6,182,212,.55),
+               0 0 60px rgba(124,58,237,.45);
+}
+
+.profile-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* RESUME OVERLAY */
+.overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(2,10,30,0.65);
+    opacity:0;
+    transition:opacity .3s ease;
+}
+.profile-wrap:hover .overlay{opacity:1}
+
+.overlay a{
+    padding:12px 20px;
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),#7c3aed);
+    color:#021120;
+    font-weight:600;
+    text-decoration:none;
+}
+
+/* CONTACT */
+.panel{
+    background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);
+    padding:18px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.05);
+}
+.panel a{
+    display:block;
+    color:var(--muted);
+    text-decoration:none;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:20px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+}
+
+
+
+
+nav a{
+    position:relative;
+    transition:color .25s ease, background .25s ease, transform .25s ease;
+}
+
+/* subtle hover */
+nav a:hover{
+    color:#ffffff;
+    background:rgba(255,255,255,0.08);
+    transform:translateY(-2px);
+}
+
+/* underline glow effect */
+nav a::after{
+    content:"";
+    position:absolute;
+    left:12px;
+    right:12px;
+    bottom:4px;
+    height:2px;
+    background:linear-gradient(90deg,#06b6d4,#7c3aed);
+    opacity:0;
+    transform:scaleX(0);
+    transition:all .25s ease;
+}
+
+nav a:hover::after{
+    opacity:1;
+    transform:scaleX(1);
+}
+
+/* primary button stronger hover */
+nav a.primary:hover{
+    background:linear-gradient(90deg,#06b6d4,#7c3aed);
+    color:#021120;
+}
+
+
+.btn{
+    position:relative;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+/* hover effect */
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.35),
+               0 0 18px rgba(6,182,212,.45);
+}
+
+/* optional active click feedback */
+.btn:active{
+    transform:translateY(0);
+    box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+
+/* CONTACT PANEL – RESPONSIVE */
+.panel{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+/* links baseline */
+.panel a{
+    padding:8px 10px;
+    border-radius:8px;
+    transition:
+        background .25s ease,
+        transform .2s ease;
+}
+
+/* hover / tap feedback */
+.panel a:hover{
+    background:rgba(255,255,255,0.06);
+    transform:translateX(4px);
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width:500px){
+    #contact .panel{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        text-align:center;
+    }
+
+    #contact .panel h4{
+        width:100%;
+        margin-bottom:6px;
+    }
+
+    #contact .panel a{
+        font-size:13px;
+        margin:4px;
+        white-space:nowrap;
+    }
+}
+
+
+
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <div class="topname">
+       <div class="logo logo-img">
+    <img src="e:\Kalesha_Syed_portfolio\Java_Logo.png" alt="Kalesha Syed Logo">
+</div>
+
+        <div>
+            <h1 style="margin:0;font-size:18px">Kalesha Syed</h1>
+            <p class="muted">Java Full Stack Developer (Fresher)</p>
+        </div>
+    </div>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a class="primary" href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section>
+    <div class="hero">
+        <h2>Hi, I’m Kalesha Syed</h2>
+        <p class="muted">
+           Java Full Stack Developer (Fresher) with hands-on experience building Java-based web applications using MVC architecture.
+           Strong in backend development with Core Java, JDBC, Servlets & JSP, and MySQL, along with front-end fundamentals in HTML, CSS, and JavaScript. 
+           Experienced in implementing CRUD operations, authentication flows, and deploying applications on Apache Tomcat. Actively seeking an entry-level Java Backend or Full Stack role.
+        </p>
+
+        <div class="skills">
+            <span class="chip">Core Java</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Html & CSS</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">Spring Boot</span>
+            <span class="chip">Spring MVC</span>
+            <span class="chip">JDBC</span>
+            <span class="chip">Servlets & JSP</span>
+            <span class="chip">Apache Tomcat</span>
+            <span class="chip">Git</span>
+            <span class="chip">Agile</span>
+        </div>
+
+        <div id="projects" class="projects">
+            <div class="card">
+                <h3>Airline Reservation System</h3>
+                <p class="muted">Developed a Java-based web application using Core Java, JDBC, Servlets, JSP, and MySQL that enables user registration/login, flight search, and ticket booking. 
+                    Implemented database connectivity with JDBC and deployed the application on Apache Tomcat with a JSP-based user interface.</p>
+                <a class="btn" href="https://github.com/kalesha021/Airlines-Reservation" target="_blank">GitHub</a>
+            </div>
+
+            <div class="card">
+                <h3>Polling Web Application</h3>
+                <p class="muted">Developed using SpringBoot and JSP, providing authenticated user registration and login with a one-user-one-vote mechanism to ensure voting integrity. 
+                    The application follows a layered architecture (Controller, Service, Repository, Entity) and features a dynamic user interface built with JSP and HTML.</p>
+                <a class="btn" href="https://github.com/kalesha021/Polling" target="_blank">GitHub</a>
+            </div>
+        </div>
+
+        <section id="about" style="margin-top:20px">
+            <h3>About Me</h3>
+            <p class="muted">
+               Mechanical Engineering graduate transitioned into software development with a strong focus on Java backend technologies. 
+               Experienced in building web applications using Core Java, JDBC, Servlets, JSP, and MySQL, including authentication, CRUD operations, and deployment on Apache Tomcat. 
+               Seeking an entry-level Java Backend or Full Stack role.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        Seeking entry-level Java / Backend opportunities.
+    </footer>
+</section>
+
+<aside id="contact">
+    <div class="sticky-box">
+        <div class="profile-wrap">
+            <img src="ProfilPic.jpg" alt="Kalesha Syed">
+            <div class="overlay">
+                <a href="e:\Kalesha_Syed_portfolio\Kalesha_Syed_Java_FullStack_Fresher.pdf" download>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h4>Contact</h4>
+            <a href="mailto:sdkalesha915@gmail.com">sdkalesha915@gmail.com</a>
+            <a href="https://github.com/kalesha021" target="_blank">github.com/kalesha021</a>
+            <a href="https://linkedin.com/in/syed-kalesha21" target="_blank">linkedin.com/in/syed-kalesha21</a>
+        </div>
+    </div>
+</aside>
+</main>
+
+</div>
+</body>
+</html>
