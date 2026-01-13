@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Kalesha Syed | Java Full Stack Developer</title>
+<meta name="description" content="Java Full Stack Developer fresher portfolio">
+
+<style>
+:root{
+    --bg:#0f1724;
+    --muted:#9aa4b2;
+    --accent:#06b6d4;
+    --glass:rgba(255,255,255,0.04);
+    --radius:14px;
+    --maxw:1100px;
+    --ff:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+}
+*{box-sizing:border-box}
+
+body{
+    margin:0;
+    font-family:var(--ff);
+    background:linear-gradient(180deg,#071026 0%,var(--bg) 100%);
+    color:#e6eef6;
+    padding:40px 20px;
+    display:flex;
+    justify-content:center;
+}
+.container{width:100%;max-width:var(--maxw)}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    margin-bottom:24px;
+}
+.topname{display:flex;gap:12px;align-items:center}
+
+.logo{
+    width:48px;
+    height:48px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#06b6d4,#7c3aed);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+.logo img{width:100%;height:100%;object-fit:cover}
+
+nav a{
+    color:var(--muted);
+    text-decoration:none;
+    padding:8px 12px;
+    border-radius:8px;
+    font-size:14px;
+}
+nav a.primary{
+    background:var(--glass);
+    color:#fff;
+}
+
+main{
+    display:grid;
+    grid-template-columns:1fr 360px;
+    gap:22px;
+}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+
+.hero{
+    padding:28px;
+    border-radius:var(--radius);
+    border:1px solid rgba(255,255,255,.05);
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+}
+
+.muted{color:var(--muted);font-size:14px}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:14px;
+}
+.chip{
+    background:var(--glass);
+    padding:8px 12px;
+    border-radius:999px;
+    font-size:13px;
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.projects{
+    margin-top:22px;
+    display:grid;
+    gap:14px;
+}
+.card{
+    padding:16px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.05);
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+}
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 14px;
+    border-radius:8px;
+    font-size:13px;
+    text-decoration:none;
+    color:#021120;
+    background:linear-gradient(90deg,var(--accent),#7c3aed);
+}
+
+aside{position:relative}
+.sticky-box{position:sticky;top:24px;display:flex;flex-direction:column;gap:16px}
+
+.profile-wrap{
+    position:relative;
+    height:480px;
+    border-radius:16px;
+    overflow:hidden;
+    background:linear-gradient(135deg,#7c3aed,#06b6d4);
+}
+.profile-wrap img{width:100%;height:100%;object-fit:cover}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(2,10,30,.65);
+    opacity:0;
+    transition:.3s;
+}
+.profile-wrap:hover .overlay{opacity:1}
+
+.overlay a{
+    padding:12px 20px;
+    border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),#7c3aed);
+    color:#021120;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.panel{
+    padding:18px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,.05);
+    background:linear-gradient(180deg,rgba(255,255,255,.02),transparent);
+}
+.panel a{
+    display:block;
+    color:var(--muted);
+    text-decoration:none;
+    margin-bottom:8px;
+    font-size:14px;
+}
+
+footer{
+    margin-top:20px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+    <div class="topname">
+        <div class="logo">
+            <img src="./Java_Logo.png" alt="Java Logo">
+        </div>
+        <div>
+            <h1 style="margin:0;font-size:18px">Kalesha Syed</h1>
+            <p class="muted">Java Full Stack Developer (Fresher)</p>
+        </div>
+    </div>
+    <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a class="primary" href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+<section>
+<div class="hero">
+<h2>Hi, I’m Kalesha Syed</h2>
+<p class="muted">
+Java Full Stack Developer (Fresher) with hands-on experience in Core Java, JDBC, Servlets, JSP,
+Spring Boot, and MySQL. Experienced in MVC architecture, CRUD operations, authentication,
+and deployment on Apache Tomcat. Actively seeking an entry-level Java Backend or Full Stack role.
+</p>
+
+<div class="skills">
+<span class="chip">Core Java</span>
+<span class="chip">JDBC</span>
+<span class="chip">Servlets & JSP</span>
+<span class="chip">Spring Boot</span>
+<span class="chip">Spring MVC</span>
+<span class="chip">MySQL</span>
+<span class="chip">HTML & CSS</span>
+<span class="chip">JavaScript</span>
+<span class="chip">Git</span>
+<span class="chip">Apache Tomcat</span>
+</div>
+
+<div id="projects" class="projects">
+<div class="card">
+<h3>Airline Reservation System</h3>
+<p class="muted">
+Java web application with user authentication, flight search, and booking using
+Core Java, JDBC, Servlets, JSP, and MySQL.
+</p>
+<a class="btn" href="https://github.com/kalesha021/Airlines-Reservation" target="_blank">GitHub</a>
+</div>
+
+<div class="card">
+<h3>Polling Web Application</h3>
+<p class="muted">
+Spring Boot application implementing secure voting with MVC layered architecture
+and MySQL integration.
+</p>
+<a class="btn" href="https://github.com/kalesha021/Polling" target="_blank">GitHub</a>
+</div>
+</div>
+
+<section id="about" style="margin-top:20px">
+<h3>About Me</h3>
+<p class="muted">
+Mechanical Engineering graduate transitioned into Java backend development with
+strong focus on clean code, MVC architecture, and scalable web applications.
+</p>
+</section>
+</div>
+
+<footer>Seeking entry-level Java / Backend opportunities</footer>
+</section>
+
+<aside id="contact">
+<div class="sticky-box">
+<div class="profile-wrap">
+<img src="./ProfilPic.jpg" alt="Kalesha Syed">
+<div class="overlay">
+<a href="./Kalesha_Syed_Java_FullStack_Fresher.pdf" download>Download Resume</a>
+</div>
+</div>
+
+<div class="panel">
+<h4>Contact</h4>
+<a href="mailto:sdkalesha915@gmail.com">sdkalesha915@gmail.com</a>
+<a href="https://github.com/kalesha021" target="_blank">github.com/kalesha021</a>
+<a href="https://linkedin.com/in/syed-kalesha21" target="_blank">linkedin.com/in/syed-kalesha21</a>
+</div>
+</div>
+</aside>
+</main>
+
+</div>
+</body>
+</html>
